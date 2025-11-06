@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CocktailBar</title>
+    <title>Cocktails</title>
     <link rel="stylesheet" href="../CSS/styles.css">
-    <script src="../JS/index.js" defer> </script> 
+    <script src="../JS/cocktail.js" defer> </script> 
     <link rel = "icon" href="../ASSETS/web_ico.ico" type="image/x-icon">
 </head>
 <body>
-    <video autoplay muted loop playsinline id="fullScreenVideo">
-        <source src="../ASSETS/videoweb.webm" type="video/webm">
-        Tu navegador no soporta la etiqueta de video.
-    </video>
+
     <header class="header"> 
         <nav class="nav">
             <div class="icon">
@@ -27,24 +24,15 @@
             </ul>
         </nav>
     </header>
-    <main class="main">
-        <section class="hero">
-            <h1 class="hero-title">
-                Descubre<br>
-                El Arte<br>
-                De los<br>
-                Cockteles
-            </h1>
-            <h3 class="subtitle-hero">
-                 ¡Salud! <br> Porque un buen cóctel <br> siempre es una buena idea.
-            </h3>
-        </section>
-        <section id="cocktails" class="cocktails">
 
+
+    <main class="main">
+        <section id="cocktails-section" class="cocktails-section">
+            <h1 class="title-cocktails">Nuestra coleccion</h1>
+            <div id="cocktails-container" class="cocktails-section"></div>
         </section>
 
     </main>
-    
     <footer class="footer">
         <img src="../ASSETS/cocktail_ic.png" alt="icon-web" class="img-footer">
         <h4 class="title-footer"> The cocktail collection </h4>
