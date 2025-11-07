@@ -1,12 +1,19 @@
-
-
 async function obtenerDatos() {
+  const container = document.getElementById("cocktails-container")
+  container.innerHTML = ``
+
+  const loading = document.createElement("p");
+  loading.classList.add("loading");
+  loading.textContent = "Cargando cócteles...";
+  container.appendChild(loading);
   try {
     const response = await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail");
     const data = await response.json();
-    const container = document.getElementById("cocktails")
 
-    data.drinks.slice(0, 6).forEach(drink => {
+    loading.remove();
+
+
+    data.drinks.forEach(drink => {
         const card = document.createElement("div");
         card.classList.add("cocktail");
         card.innerHTML =
