@@ -291,7 +291,7 @@ body {
 }
 
 .form-container input,
-.form-container textarea {
+.form-container textarea ,.form-container select {
   background: var(--color-text);
   border: 1px solid var(--color-text);
   border-radius: 16px;
@@ -301,6 +301,10 @@ body {
   outline: none;
   transition: border-color 0.3s;
   resize: none;
+}
+.radio-group{
+  margin: 15px 2px;
+  
 }
 
 .btn-enviar {

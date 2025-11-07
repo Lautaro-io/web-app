@@ -28,26 +28,49 @@
 
     <main class="main">
         <section class="form-section">
-            <div class="form-header">
-                <img src="../ASSETS/cocktail_ic.png" alt="icon-web">
-                <p>Contáctanos</p>
-                <span>¿Tienes alguna pregunta o sugerencia? Nos encantaría escucharte.</span>
+    <div class="form-header">
+        <img src="../ASSETS/cocktail_ic.png" alt="icon-web">
+        <p>Contáctanos</p>
+        <span>¿Tienes alguna pregunta o sugerencia? Nos encantaría escucharte.</span>
+    </div>
+    <form class="form-container" id="form-container">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="tu@email.com" required>
+
+        <label for="tema-consulta">Tema de la Consulta</label>
+        <select id="tema-consulta" required>
+            <option value="" disabled selected>Selecciona un tema...</option>
+            <option value="sugerencia">Sugerencia de Receta</option>
+            <option value="reporte">Reportar un Error en la Web</option>
+            <option value="colaboracion">Propuesta de Colaboración</option>
+            <option value="otro">Otro / General</option>
+        </select>
+        
+        <div class="radio-group">
+            <label>Método de Contacto Preferido</label>
+            <div class="radio-options">
+                <input type="radio" id="contacto-email" name="contacto-preferido" value="email" required>
+                <label for="contacto-email">Email</label>
+                
+                <input type="radio" id="contacto-tel" name="contacto-preferido" value="telefono">
+                <label for="contacto-tel">Teléfono</label>
+                
+                <input type="radio" id="contacto-ninguno" name="contacto-preferido" value="ninguno">
+                <label for="contacto-ninguno">No es Urgente</label>
             </div>
-            <form class="form-container" id="form-container">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" placeholder="Tu nombre" required>
+        </div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="tu@email.com" required>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
-
-                <button type="submit" class="btn-enviar">
-                    <span> Enviar Mensaje</span>
-                </button>
-            </form>
-        </section>
+        <button type="submit" class="btn-enviar">
+            <span> Enviar Mensaje</span>
+        </button>
+    </form>
+</section>
 
     </main>
     <footer class="footer">
